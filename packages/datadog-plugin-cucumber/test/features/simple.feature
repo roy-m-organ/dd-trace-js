@@ -18,3 +18,8 @@ Feature: Datadog integration
   @skip
   Scenario: skip scenario based on tag
     Given datadog
+
+  Scenario: integration db scenario
+    Given datadog
+    When db
+    Then pass
