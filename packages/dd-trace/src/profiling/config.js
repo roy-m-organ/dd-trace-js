@@ -42,9 +42,9 @@ class Config {
     this.exporters = options.exporters || [
       new AgentExporter()
     ]
+    // Heap profiler is not included for now due to significant latency
     this.profilers = options.profilers || [
-      new CpuProfiler(),
-      new HeapProfiler()
+      new CpuProfiler()
     ]
   }
 }
